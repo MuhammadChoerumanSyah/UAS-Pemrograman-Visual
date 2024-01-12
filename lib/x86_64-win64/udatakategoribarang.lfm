@@ -1,21 +1,19 @@
 object TfrmDataKategoriBarang: TTfrmDataKategoriBarang
-  Left = 658
-  Height = 484
-  Top = 285
-  Width = 656
+  Left = 382
+  Height = 403
+  Top = 250
+  Width = 547
   Caption = 'Data Kategori'
-  ClientHeight = 484
-  ClientWidth = 656
-  Color = 7577855
-  DesignTimePPI = 144
+  ClientHeight = 403
+  ClientWidth = 547
+  DesignTimePPI = 120
   OnClose = FormClose
   OnCreate = FormCreate
-  LCLVersion = '2.2.6.0'
   object DBGridKategori: TDBGrid
-    Left = 72
-    Height = 272
-    Top = 144
-    Width = 512
+    Left = 60
+    Height = 227
+    Top = 120
+    Width = 427
     Color = clWindow
     Columns = <>
     DataSource = DataSourceKatagori
@@ -23,13 +21,13 @@ object TfrmDataKategoriBarang: TTfrmDataKategoriBarang
     OnCellClick = DBGridKategoriCellClick
   end
   object Label1: TLabel
-    Left = 176
-    Height = 45
-    Top = 24
-    Width = 324
+    Left = 160
+    Height = 37
+    Top = 20
+    Width = 278
     Caption = 'Data Kategori Barang'
     Font.CharSet = ANSI_CHARSET
-    Font.Height = -32
+    Font.Height = -27
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
@@ -37,96 +35,103 @@ object TfrmDataKategoriBarang: TTfrmDataKategoriBarang
     ParentFont = False
   end
   object BtnDelete: TButton
-    Left = 440
-    Height = 36
-    Top = 432
-    Width = 144
+    Left = 60
+    Height = 30
+    Top = 360
+    Width = 120
     Caption = 'Hapus'
-    Font.Style = [fsBold]
-    OnClick = BtnDeleteClick
-    ParentFont = False
     TabOrder = 1
+    OnClick = BtnDeleteClick
   end
   object BtnCari: TButton
-    Left = 400
-    Height = 33
-    Top = 93
-    Width = 80
-    Caption = 'Search'
-    Font.Style = [fsBold]
-    OnClick = BtnCariClick
-    ParentFont = False
+    Left = 233
+    Height = 32
+    Top = 78
+    Width = 120
+    Caption = 'Cari'
     TabOrder = 2
+    OnClick = BtnCariClick
   end
   object ECari: TEdit
-    Left = 72
-    Height = 33
-    Top = 93
-    Width = 304
+    Left = 60
+    Height = 28
+    Top = 78
+    Width = 153
     TabOrder = 3
-    TextHint = 'Search'
+    TextHint = 'Cari'
   end
   object BtnReset: TButton
-    Left = 504
-    Height = 33
-    Top = 93
-    Width = 80
+    Left = 367
+    Height = 32
+    Top = 78
+    Width = 120
     Caption = 'Reset'
-    Font.Style = [fsBold]
-    OnClick = BtnResetClick
-    ParentFont = False
     TabOrder = 4
+    OnClick = BtnResetClick
   end
   object BtnAddKategori: TButton
-    Left = 80
-    Height = 36
-    Top = 432
-    Width = 144
+    Left = 367
+    Height = 30
+    Top = 360
+    Width = 120
     Caption = 'Tambah'
-    Font.Style = [fsBold]
-    OnClick = BtnAddKategoriClick
-    ParentFont = False
     TabOrder = 5
+    OnClick = BtnAddKategoriClick
   end
   object BtnUpdate: TButton
-    Left = 256
-    Height = 38
-    Top = 432
-    Width = 144
+    Left = 213
+    Height = 32
+    Top = 360
+    Width = 120
     Caption = 'Update'
-    Font.Style = [fsBold]
-    OnClick = BtnUpdateClick
-    ParentFont = False
     TabOrder = 6
+    OnClick = BtnUpdateClick
   end
   object SQLQueryKategori: TSQLQuery
-    FieldDefs = <>
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'nama'
+        DataType = ftString
+        Precision = -1
+        Size = 100
+      end>
+    Active = True
     Database = SQLConnector1
     Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from kategori'
+    )
     Params = <>
     Macros = <>
-    Left = 192
-    Top = 184
+    Left = 160
+    Top = 153
   end
   object DataSourceKatagori: TDataSource
     DataSet = SQLQueryKategori
-    Left = 400
-    Top = 184
+    Left = 333
+    Top = 153
   end
   object SQLTransaction1: TSQLTransaction
     Active = True
     Database = SQLConnector1
-    Left = 192
-    Top = 280
+    Left = 160
+    Top = 233
   end
   object SQLConnector1: TSQLConnector
     Connected = True
     LoginPrompt = False
-    DatabaseName = 'transaksi_jualan'
+    DatabaseName = 'latihan1'
     KeepConnection = False
     Transaction = SQLTransaction1
     ConnectorType = 'ODBC'
-    Left = 400
-    Top = 280
+    Left = 333
+    Top = 233
   end
 end

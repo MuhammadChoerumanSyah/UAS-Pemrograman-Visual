@@ -1,24 +1,22 @@
 object TfrmMain: TTfrmMain
-  Left = 754
-  Height = 454
-  Top = 269
-  Width = 715
+  Left = 564
+  Height = 537
+  Top = 364
+  Width = 691
   Caption = 'Main'
-  ClientHeight = 424
-  ClientWidth = 715
-  Color = 7577855
-  DesignTimePPI = 144
+  ClientHeight = 537
+  ClientWidth = 691
+  DesignTimePPI = 120
   Menu = MainMenu1
   OnCreate = FormCreate
-  LCLVersion = '2.2.6.0'
   object LNS: TLabel
-    Left = 136
-    Height = 45
-    Top = 160
-    Width = 88
+    Left = 184
+    Height = 37
+    Top = 176
+    Width = 76
     Caption = 'Nama'
     Font.CharSet = ANSI_CHARSET
-    Font.Height = -32
+    Font.Height = -27
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
@@ -26,9 +24,24 @@ object TfrmMain: TTfrmMain
     ParentFont = False
     Visible = False
   end
+  object StaticText1: TStaticText
+    Left = 96
+    Height = 100
+    Top = 40
+    Width = 497
+    Caption = 'Aplikasi Penjualan'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -60
+    Font.Name = 'Segoe UI Semibold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
   object MainMenu1: TMainMenu
-    Left = 336
-    Top = 232
+    Left = 307
+    Top = 287
     object MenuFile: TMenuItem
       Caption = 'File'
       object MenuLogin: TMenuItem

@@ -73,6 +73,13 @@
         <UnitName Value="uUpdateBarang"/>
       </Unit>
       <Unit>
+        <Filename Value="uTransaksi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TfrmTransaksi"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
         <Filename Value="utambahtransaksi.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="TfrmTambahTransaksi"/>

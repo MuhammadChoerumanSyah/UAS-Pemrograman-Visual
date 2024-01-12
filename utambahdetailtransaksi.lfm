@@ -1,23 +1,21 @@
 object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
-  Left = 660
-  Height = 378
-  Top = 274
-  Width = 807
+  Left = 529
+  Height = 315
+  Top = 270
+  Width = 672
   Caption = 'Tambah Detail Transaksi'
-  ClientHeight = 378
-  ClientWidth = 807
-  Color = 7577855
-  DesignTimePPI = 144
+  ClientHeight = 315
+  ClientWidth = 672
+  DesignTimePPI = 120
   OnCreate = FormCreate
-  LCLVersion = '2.2.6.0'
   object Label1: TLabel
-    Left = 216
-    Height = 45
-    Top = 32
-    Width = 362
+    Left = 180
+    Height = 37
+    Top = 40
+    Width = 311
     Caption = 'Tambah Detail Transaksi'
     Font.CharSet = ANSI_CHARSET
-    Font.Height = -32
+    Font.Height = -27
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
@@ -25,34 +23,34 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 160
-    Height = 25
-    Top = 136
-    Width = 92
+    Left = 133
+    Height = 20
+    Top = 113
+    Width = 79
     Caption = 'Pilih Barang'
     ParentColor = False
   end
   object Label3: TLabel
-    Left = 160
-    Height = 25
-    Top = 192
-    Width = 115
+    Left = 133
+    Height = 20
+    Top = 160
+    Width = 97
     Caption = 'Jumlah Barang'
     ParentColor = False
   end
   object EJumlah: TEdit
-    Left = 296
-    Height = 33
-    Top = 192
-    Width = 300
+    Left = 280
+    Height = 28
+    Top = 160
+    Width = 213
     TabOrder = 0
     TextHint = 'Jumlah Barang'
   end
   object DBLookupBarang: TDBLookupComboBox
-    Left = 296
-    Height = 33
-    Top = 136
-    Width = 300
+    Left = 280
+    Height = 28
+    Top = 113
+    Width = 213
     DataField = 'id'
     DataSource = DataSourcePilihBarang
     KeyField = 'id'
@@ -64,15 +62,13 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
     TabOrder = 1
   end
   object BTambahDetailTransaksi: TButton
-    Left = 320
-    Height = 40
-    Top = 256
-    Width = 256
+    Left = 280
+    Height = 32
+    Top = 213
+    Width = 213
     Caption = 'Tambah'
-    Font.Style = [fsBold]
-    OnClick = BTambahDetailTransaksiClick
-    ParentFont = False
     TabOrder = 2
+    OnClick = BTambahDetailTransaksiClick
   end
   object SQLQueryPilihBarang: TSQLQuery
     IndexName = 'DEFAULT_ORDER'
@@ -84,24 +80,31 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
         Precision = -1
       end    
       item
-        Name = 'nama'
-        DataType = ftWideString
+        Name = 'kategori'
+        DataType = ftString
         Precision = -1
-        Size = 60
+        Size = 110
       end    
       item
-        Name = 'kategori_id'
-        DataType = ftInteger
+        Name = 'nama'
+        DataType = ftString
         Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'gambar'
+        DataType = ftString
+        Precision = -1
+        Size = 100
       end    
       item
         Name = 'harga_beli'
-        DataType = ftInteger
+        DataType = ftFloat
         Precision = -1
       end    
       item
         Name = 'harga_jual'
-        DataType = ftInteger
+        DataType = ftFloat
         Precision = -1
       end    
       item
@@ -117,29 +120,29 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
     )
     Params = <>
     Macros = <>
-    Left = 704
-    Top = 272
+    Left = 587
+    Top = 227
   end
   object SQLTransaction1: TSQLTransaction
     Active = True
     Database = SQLConnector1
-    Left = 704
-    Top = 184
+    Left = 587
+    Top = 153
   end
   object SQLConnector1: TSQLConnector
     Connected = True
     LoginPrompt = False
-    DatabaseName = 'transaksi_jualan'
+    DatabaseName = 'latihan1'
     KeepConnection = False
     Transaction = SQLTransaction1
     ConnectorType = 'ODBC'
-    Left = 704
-    Top = 96
+    Left = 587
+    Top = 80
   end
   object DataSourcePilihBarang: TDataSource
     DataSet = SQLQueryPilihBarang
-    Left = 704
-    Top = 16
+    Left = 587
+    Top = 13
   end
   object SQLQuery2: TSQLQuery
     FieldDefs = <>
@@ -147,13 +150,13 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
     Transaction = SQLTransaction1
     Params = <>
     Macros = <>
-    Left = 48
-    Top = 280
+    Left = 67
+    Top = 233
   end
   object DataSource2: TDataSource
     DataSet = SQLQuery2
-    Left = 48
-    Top = 200
+    Left = 67
+    Top = 167
   end
   object frReport1: TfrReport
     Dataset = frDBDataSet1
@@ -161,13 +164,13 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
     Options = []
     PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
     DataType = dtDataSet
-    Left = 48
-    Top = 24
+    Left = 67
+    Top = 20
   end
   object frDBDataSet1: TfrDBDataSet
     DataSet = SQLQuery1
-    Left = 48
-    Top = 112
+    Left = 67
+    Top = 93
   end
   object SQLQuery1: TSQLQuery
     IndexName = 'DEFAULT_ORDER'
@@ -180,9 +183,9 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
       end    
       item
         Name = 'customer'
-        DataType = ftWideString
+        DataType = ftString
         Precision = -1
-        Size = 30
+        Size = 100
       end    
       item
         Name = 'tanggal_transaksi'
@@ -216,35 +219,56 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
       end    
       item
         Name = 'harga_beli'
-        DataType = ftInteger
+        DataType = ftFloat
         Precision = -1
       end    
       item
         Name = 'harga_jual'
-        DataType = ftInteger
+        DataType = ftFloat
         Precision = -1
       end    
       item
         Name = 'nama_barang'
-        DataType = ftWideString
+        DataType = ftString
         Precision = -1
-        Size = 60
+        Size = 30
       end    
       item
         Name = 'kategori'
-        DataType = ftWideString
+        DataType = ftString
         Precision = -1
-        Size = 50
+        Size = 100
       end>
+    Active = True
     Database = SQLConnector1
     Transaction = SQLTransaction1
     SQL.Strings = (
-      'SELECT dt.id, t.customer, t.tanggal as tanggal_transaksi, dt.jumlah, dt.diskon as diskon_beli_barang, t.diskon as diskon_transaksi, t.sub_total, t.total, db.harga_beli, db.harga_jual, db.nama as nama_barang, k.nama as kategori FROM detail_transaksi as dt JOIN data_barang as db ON db.id = dt.barang_id JOIN kategori as k ON k.id = db.kategori_id JOIN transaksi as t ON dt.transaksi_id = t.id'
+      'SELECT'
+      '    dt.id,'
+      '    t.customer,'
+      '    t.tanggal AS tanggal_transaksi,'
+      '    dt.jumlah,'
+      '    dt.diskon AS diskon_beli_barang,'
+      '    t.diskon AS diskon_transaksi,'
+      '    t.sub_total,'
+      '    t.total,'
+      '    db.harga_beli,'
+      '    db.harga_jual,'
+      '    db.nama AS nama_barang,'
+      '    k.nama AS kategori'
+      'FROM'
+      '    detail_transaksi AS dt'
+      'JOIN'
+      '    data_barang AS db ON db.id = dt.barang_id'
+      'JOIN'
+      '    kategori AS k ON k.id = db.id'
+      'JOIN'
+      '    transaksi AS t ON dt.transaksi_id = t.id;'
       ''
     )
     Params = <>
     Macros = <>
-    Left = 160
-    Top = 280
+    Left = 200
+    Top = 233
   end
 end

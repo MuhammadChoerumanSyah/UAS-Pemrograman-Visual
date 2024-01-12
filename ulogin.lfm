@@ -1,22 +1,20 @@
 object TfrmLogin: TTfrmLogin
-  Left = 788
-  Height = 447
-  Top = 278
-  Width = 521
+  Left = 660
+  Height = 360
+  Top = 283
+  Width = 456
   Caption = 'Login'
-  ClientHeight = 447
-  ClientWidth = 521
-  Color = 7577855
-  DesignTimePPI = 144
-  LCLVersion = '2.2.6.0'
+  ClientHeight = 360
+  ClientWidth = 456
+  DesignTimePPI = 120
   object Label1: TLabel
-    Left = 224
-    Height = 45
-    Top = 48
-    Width = 84
+    Left = 207
+    Height = 37
+    Top = 40
+    Width = 72
     Caption = 'Login'
     Font.CharSet = ANSI_CHARSET
-    Font.Height = -32
+    Font.Height = -27
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
@@ -24,60 +22,56 @@ object TfrmLogin: TTfrmLogin
     ParentFont = False
   end
   object BLogin: TButton
-    Left = 145
-    Height = 38
-    Top = 256
-    Width = 113
+    Left = 141
+    Height = 32
+    Top = 213
+    Width = 94
     Caption = 'Login'
-    Font.Style = [fsBold]
-    OnClick = BLoginClick
-    ParentFont = False
     TabOrder = 0
+    OnClick = BLoginClick
   end
   object Label2: TLabel
-    Left = 56
-    Height = 25
-    Top = 137
-    Width = 79
+    Left = 67
+    Height = 20
+    Top = 107
+    Width = 66
     Caption = 'Username'
     ParentColor = False
   end
   object Label3: TLabel
-    Left = 56
-    Height = 25
-    Top = 209
-    Width = 75
+    Left = 67
+    Height = 20
+    Top = 167
+    Width = 61
     Caption = 'Password'
     ParentColor = False
   end
   object EUsername: TEdit
-    Left = 145
-    Height = 33
-    Top = 136
-    Width = 312
+    Left = 141
+    Height = 28
+    Top = 106
+    Width = 220
     TabOrder = 1
     TextHint = 'Masukkan username'
   end
   object EPassword: TEdit
-    Left = 144
-    Height = 33
-    Top = 201
-    Width = 313
+    Left = 140
+    Height = 28
+    Top = 160
+    Width = 221
     EchoMode = emPassword
     PasswordChar = '*'
     TabOrder = 2
     TextHint = 'Masukkan password'
   end
   object BExit: TButton
-    Left = 344
-    Height = 38
-    Top = 256
-    Width = 113
+    Left = 267
+    Height = 32
+    Top = 213
+    Width = 94
     Caption = 'Exit'
-    Font.Style = [fsBold]
-    OnClick = BExitClick
-    ParentFont = False
     TabOrder = 3
+    OnClick = BExitClick
   end
   object SQLQuery1: TSQLQuery
     FieldDefs = <>
@@ -85,23 +79,23 @@ object TfrmLogin: TTfrmLogin
     Transaction = SQLTransaction1
     Params = <>
     Macros = <>
-    Left = 416
-    Top = 329
+    Left = 336
+    Top = 272
   end
   object SQLConnector1: TSQLConnector
     Connected = True
     LoginPrompt = False
-    DatabaseName = 'transaksi_jualan'
+    DatabaseName = 'latihan1'
     KeepConnection = False
     Transaction = SQLTransaction1
     ConnectorType = 'ODBC'
-    Left = 104
-    Top = 328
+    Left = 48
+    Top = 256
   end
   object SQLTransaction1: TSQLTransaction
     Active = True
     Database = SQLConnector1
-    Left = 256
-    Top = 329
+    Left = 192
+    Top = 288
   end
 end

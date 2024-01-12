@@ -1,24 +1,22 @@
 object TfrmTambahBarang: TTfrmTambahBarang
-  Left = 529
-  Height = 588
-  Top = 202
-  Width = 590
+  Left = 995
+  Height = 490
+  Top = 295
+  Width = 565
   Caption = 'Tambah Barang'
-  ClientHeight = 588
-  ClientWidth = 590
-  Color = 7577855
-  DesignTimePPI = 144
+  ClientHeight = 490
+  ClientWidth = 565
+  DesignTimePPI = 120
   OnClose = FormClose
   OnCreate = FormCreate
-  LCLVersion = '2.2.6.0'
   object Label1: TLabel
-    Left = 172
-    Height = 45
-    Top = 32
-    Width = 234
+    Left = 180
+    Height = 37
+    Top = 27
+    Width = 200
     Caption = 'Tambah Barang'
     Font.CharSet = ANSI_CHARSET
-    Font.Height = -32
+    Font.Height = -27
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
@@ -26,89 +24,87 @@ object TfrmTambahBarang: TTfrmTambahBarang
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 33
-    Height = 25
-    Top = 120
-    Width = 47
+    Left = 64
+    Height = 20
+    Top = 112
+    Width = 40
     Caption = 'Nama'
     ParentColor = False
   end
   object Label3: TLabel
-    Left = 33
-    Height = 25
-    Top = 169
-    Width = 66
+    Left = 64
+    Height = 20
+    Top = 153
+    Width = 57
     Caption = 'Kategori'
     ParentColor = False
   end
   object Label4: TLabel
-    Left = 33
-    Height = 25
-    Top = 217
-    Width = 80
+    Left = 64
+    Height = 20
+    Top = 193
+    Width = 70
     Caption = 'Harga Beli'
     ParentColor = False
   end
   object Label5: TLabel
-    Left = 33
-    Height = 25
-    Top = 265
-    Width = 82
+    Left = 64
+    Height = 20
+    Top = 233
+    Width = 70
     Caption = 'Harga Jual'
     ParentColor = False
   end
   object Label6: TLabel
-    Left = 33
-    Height = 25
-    Top = 313
-    Width = 95
+    Left = 64
+    Height = 20
+    Top = 273
+    Width = 79
     Caption = 'Jumlah Stok'
     ParentColor = False
   end
   object ENama: TEdit
-    Left = 144
-    Height = 33
-    Top = 120
-    Width = 400
+    Left = 180
+    Height = 28
+    Top = 112
+    Width = 231
     TabOrder = 0
   end
   object EHargaBeli: TEdit
-    Left = 144
-    Height = 33
-    Top = 217
-    Width = 400
+    Left = 180
+    Height = 28
+    Top = 193
+    Width = 231
     TabOrder = 1
   end
   object EHargaJual: TEdit
-    Left = 144
-    Height = 33
-    Top = 264
-    Width = 400
+    Left = 180
+    Height = 28
+    Top = 233
+    Width = 231
     TabOrder = 2
   end
   object EJumlahStok: TEdit
-    Left = 144
-    Height = 33
-    Top = 313
-    Width = 400
+    Left = 180
+    Height = 28
+    Top = 273
+    Width = 231
     TabOrder = 3
   end
   object BSimpan: TButton
-    Left = 216
-    Height = 40
-    Top = 368
-    Width = 278
+    Left = 180
+    Height = 32
+    Top = 320
+    Width = 232
     Caption = 'Simpan'
-    Font.Style = [fsBold]
-    OnClick = BSimpanClick
-    ParentFont = False
     TabOrder = 4
+    OnClick = BSimpanClick
   end
   object DBLookupkategori: TDBLookupComboBox
-    Left = 144
-    Height = 33
-    Top = 169
-    Width = 400
+    Left = 180
+    Height = 28
+    Top = 153
+    Width = 232
     DataField = 'id'
     DataSource = DataSource1
     KeyField = 'id'
@@ -120,8 +116,8 @@ object TfrmTambahBarang: TTfrmTambahBarang
   end
   object DataSource1: TDataSource
     DataSet = SQLQuery1
-    Left = 40
-    Top = 432
+    Left = 482
+    Top = 33
   end
   object SQLQuery1: TSQLQuery
     IndexName = 'DEFAULT_ORDER'
@@ -134,11 +130,10 @@ object TfrmTambahBarang: TTfrmTambahBarang
       end    
       item
         Name = 'nama'
-        DataType = ftWideString
+        DataType = ftString
         Precision = -1
-        Size = 50
+        Size = 100
       end>
-    Active = True
     Database = SQLConnector1
     Transaction = SQLTransaction1
     SQL.Strings = (
@@ -150,24 +145,24 @@ object TfrmTambahBarang: TTfrmTambahBarang
     Params = <>
     Macros = <>
     MacroCheck = True
-    Left = 288
-    Top = 432
+    Left = 482
+    Top = 180
   end
   object SQLConnector1: TSQLConnector
     Connected = True
     LoginPrompt = False
-    DatabaseName = 'transaksi_jualan'
+    DatabaseName = 'latihan1'
     KeepConnection = False
     Transaction = SQLTransaction1
     ConnectorType = 'ODBC'
-    Left = 408
-    Top = 432
+    Left = 482
+    Top = 253
   end
   object SQLTransaction1: TSQLTransaction
-    Active = True
+    Active = False
     Database = SQLConnector1
-    Left = 112
-    Top = 512
+    Left = 482
+    Top = 327
   end
   object SQLQuery2: TSQLQuery
     FieldDefs = <>
@@ -175,12 +170,12 @@ object TfrmTambahBarang: TTfrmTambahBarang
     Transaction = SQLTransaction1
     Params = <>
     Macros = <>
-    Left = 248
-    Top = 512
+    Left = 482
+    Top = 407
   end
   object DataSource2: TDataSource
     DataSet = SQLQuery2
-    Left = 168
-    Top = 432
+    Left = 482
+    Top = 107
   end
 end

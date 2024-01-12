@@ -26,6 +26,7 @@ type
     MenuLogin: TMenuItem;
     MenuLogout: TMenuItem;
     MenuExit: TMenuItem;
+    StaticText1: TStaticText;
     procedure FormCreate(Sender: TObject);
     procedure MenuDataBarangClick(Sender: TObject);
     procedure MenuDataCustomerClick(Sender: TObject);
@@ -68,7 +69,7 @@ begin
          FUsername := frmLogin.EUsername.Text;
          FRole := frmLogin.GetRole;
          EnableMenu(MainMenu1.Items);
-         LNS.Caption := 'SELAMAT DATANG ' + UpperCase(Fusername);
+         LNS.Caption := 'Selamat datang, ' + UpperCase(Fusername);
          LNS.Visible:= true;
          if FRole <> 1 then
          begin

@@ -1,31 +1,29 @@
 object TfrmUpdateKategori: TTfrmUpdateKategori
-  Left = 530
-  Height = 257
-  Top = 199
-  Width = 471
+  Left = 382
+  Height = 329
+  Top = 250
+  Width = 392
   Caption = 'Update Kategori'
-  ClientHeight = 257
-  ClientWidth = 471
-  Color = 7577855
-  DesignTimePPI = 144
+  ClientHeight = 329
+  ClientWidth = 392
+  DesignTimePPI = 120
   OnCreate = FormCreate
-  LCLVersion = '2.2.6.0'
   object EKategori: TEdit
-    Left = 120
-    Height = 33
-    Top = 96
-    Width = 232
+    Left = 113
+    Height = 28
+    Top = 127
+    Width = 193
     TabOrder = 0
     TextHint = 'Masukkan Kategori'
   end
   object Label1: TLabel
-    Left = 112
-    Height = 45
-    Top = 24
-    Width = 247
+    Left = 107
+    Height = 37
+    Top = 60
+    Width = 214
     Caption = 'Update Kategori'
     Font.CharSet = ANSI_CHARSET
-    Font.Height = -32
+    Font.Height = -27
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
@@ -33,15 +31,13 @@ object TfrmUpdateKategori: TTfrmUpdateKategori
     ParentFont = False
   end
   object BtnUpdateKategori: TButton
-    Left = 120
-    Height = 38
-    Top = 168
-    Width = 232
+    Left = 113
+    Height = 32
+    Top = 173
+    Width = 193
     Caption = 'Submit'
-    Font.Style = [fsBold]
-    OnClick = BtnUpdateKategoriClick
-    ParentFont = False
     TabOrder = 1
+    OnClick = BtnUpdateKategoriClick
   end
   object SQLQueryKategori: TSQLQuery
     FieldDefs = <>
@@ -49,28 +45,28 @@ object TfrmUpdateKategori: TTfrmUpdateKategori
     Transaction = SQLTransaction1
     Params = <>
     Macros = <>
-    Left = 64
-    Top = 176
+    Left = 120
+    Top = 253
   end
   object DataSourceKatagori: TDataSource
     DataSet = SQLQueryKategori
-    Left = 368
-    Top = 176
+    Left = 280
+    Top = 253
   end
   object SQLConnector1: TSQLConnector
     Connected = True
     LoginPrompt = False
-    DatabaseName = 'transaksi_jualan'
+    DatabaseName = 'latihan1'
     KeepConnection = False
     Transaction = SQLTransaction1
     ConnectorType = 'ODBC'
-    Left = 368
-    Top = 96
+    Left = 353
+    Top = 200
   end
   object SQLTransaction1: TSQLTransaction
-    Active = True
+    Active = False
     Database = SQLConnector1
-    Left = 64
-    Top = 96
+    Left = 60
+    Top = 200
   end
 end

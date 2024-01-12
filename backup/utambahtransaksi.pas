@@ -50,6 +50,7 @@ begin
       end
       else
           ModalResult := mrCancel;
+          Self.Show;
       finally
           frmTambahDetailTransaksi.Free;
       end;

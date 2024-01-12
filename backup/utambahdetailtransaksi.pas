@@ -135,7 +135,7 @@ begin
              begin
                Close;
                SQL.Clear;
-               SQL.ADD('SELECT dt.id, t.customer, t.tanggal as tanggal_transaksi, dt.jumlah, dt.diskon as diskon_beli_barang, t.diskon as diskon_transaksi, t.sub_total, t.total, db.harga_beli, db.harga_jual, db.nama as nama_barang, k.nama as kategori FROM detail_transaksi as dt JOIN data_barang as db ON db.id = dt.barang_id JOIN kategori as k ON k.id = db.kategori_id JOIN transaksi as t ON dt.transaksi_id = t.id WHERE t.customer = :customer ORDER BY t.tanggal DESC LIMIT 1');
+               SQL.ADD('SELECT dt.id, t.customer, t.tanggal as tanggal_transaksi, dt.jumlah, dt.diskon as diskon_beli_barang, t.diskon as diskon_transaksi, t.sub_total, t.total, db.harga_beli, db.harga_jual, db.nama as nama_barang, k.nama as kategori FROM detail_transaksi as dt JOIN data_barang as db ON db.id = dt.barang_id JOIN kategori as k ON k.id = db.id JOIN transaksi as t ON dt.transaksi_id = t.id WHERE t.customer = :customer ORDER BY t.tanggal DESC LIMIT 1');
                Params.ParamByName('customer').AsString := nama_customer;
                Open;
              end;

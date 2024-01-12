@@ -1,24 +1,22 @@
 object TfrmTransaksi: TTfrmTransaksi
-  Left = 532
-  Height = 720
-  Top = 133
-  Width = 1011
+  Left = 536
+  Height = 600
+  Top = 230
+  Width = 842
   Caption = 'Transaksi'
-  ClientHeight = 720
-  ClientWidth = 1011
-  Color = 7577855
-  DesignTimePPI = 144
+  ClientHeight = 600
+  ClientWidth = 842
+  DesignTimePPI = 120
   OnCreate = FormCreate
-  LCLVersion = '2.2.6.0'
   object Label1: TLabel
-    Left = 384
-    Height = 48
-    Top = 32
-    Width = 296
+    Left = 320
+    Height = 40
+    Top = 33
+    Width = 227
     AutoSize = False
     Caption = 'Transaksi Penjualan'
     Font.CharSet = ANSI_CHARSET
-    Font.Height = -32
+    Font.Height = -24
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     Font.Style = [fsBold]
@@ -26,21 +24,21 @@ object TfrmTransaksi: TTfrmTransaksi
     ParentFont = False
   end
   object DBGrid1: TDBGrid
-    Left = 72
-    Height = 242
-    Top = 160
-    Width = 856
+    Left = 60
+    Height = 202
+    Top = 133
+    Width = 713
     Color = clWindow
     Columns = <>
     DataSource = DataSource1
-    DefaultRowHeight = 35
+    DefaultRowHeight = 29
     TabOrder = 0
   end
   object DBGrid2: TDBGrid
-    Left = 72
-    Height = 224
-    Top = 440
-    Width = 856
+    Left = 60
+    Height = 187
+    Top = 367
+    Width = 713
     AutoFillColumns = True
     Color = clWindow
     Columns = <>
@@ -49,10 +47,10 @@ object TfrmTransaksi: TTfrmTransaksi
     TabOrder = 1
   end
   object DBNavigator1: TDBNavigator
-    Left = 72
-    Height = 38
-    Top = 112
-    Width = 362
+    Left = 60
+    Height = 32
+    Top = 93
+    Width = 302
     BevelOuter = bvNone
     ChildSizing.EnlargeHorizontal = crsScaleChilds
     ChildSizing.EnlargeVertical = crsScaleChilds
@@ -60,8 +58,8 @@ object TfrmTransaksi: TTfrmTransaksi
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 100
-    ClientHeight = 38
-    ClientWidth = 362
+    ClientHeight = 32
+    ClientWidth = 302
     DataSource = DataSource2
     OnClick = DBNavigator1Click
     Options = []
@@ -70,77 +68,158 @@ object TfrmTransaksi: TTfrmTransaksi
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbInsert]
   end
   object BCari: TButton
-    Left = 680
-    Height = 38
-    Top = 112
-    Width = 113
-    Caption = 'Search'
-    OnClick = BCariClick
+    Left = 567
+    Height = 32
+    Top = 93
+    Width = 94
+    Caption = 'Cari'
     TabOrder = 3
+    OnClick = BCariClick
   end
   object ECari: TEdit
-    Left = 456
-    Height = 33
-    Top = 117
-    Width = 208
+    Left = 380
+    Height = 28
+    Top = 98
+    Width = 173
     TabOrder = 4
-    TextHint = 'Search Data'
+    TextHint = 'Cari data'
   end
   object BReset: TButton
-    Left = 816
-    Height = 38
-    Top = 112
-    Width = 113
+    Left = 680
+    Height = 32
+    Top = 93
+    Width = 94
     Caption = 'Reset'
-    OnClick = BResetClick
     TabOrder = 5
+    OnClick = BResetClick
   end
   object DataSource1: TDataSource
     DataSet = SQLQuery1
     OnUpdateData = FormCreate
-    Left = 256
-    Top = 248
+    Left = 213
+    Top = 207
   end
   object DataSource2: TDataSource
     DataSet = SQLQuery2
-    Left = 456
-    Top = 536
+    Left = 380
+    Top = 447
   end
   object SQLQuery1: TSQLQuery
     PacketRecords = -1
-    FieldDefs = <>
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'tanggal'
+        DataType = ftDateTime
+        Precision = -1
+      end    
+      item
+        Name = 'customer'
+        DataType = ftString
+        Precision = -1
+        Size = 100
+      end    
+      item
+        Name = 'sub_total'
+        DataType = ftFloat
+        Precision = -1
+      end    
+      item
+        Name = 'diskon'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'total'
+        DataType = ftFloat
+        Precision = -1
+      end>
+    Active = True
     Database = SQLConnector1
     Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from transaksi'
+    )
     Params = <>
     Macros = <>
-    Left = 416
-    Top = 248
+    Left = 347
+    Top = 207
   end
   object SQLConnector1: TSQLConnector
     Connected = True
     LoginPrompt = False
-    DatabaseName = 'transaksi_jualan'
+    DatabaseName = 'latihan1'
     KeepConnection = False
     Transaction = SQLTransaction1
     ConnectorType = 'ODBC'
-    Left = 560
-    Top = 248
+    Left = 467
+    Top = 207
   end
   object SQLTransaction1: TSQLTransaction
     Active = True
     Database = SQLConnector1
-    Left = 688
-    Top = 248
+    Left = 573
+    Top = 207
   end
   object SQLQuery2: TSQLQuery
     PacketRecords = 1
-    FieldDefs = <>
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'kategori'
+        DataType = ftString
+        Precision = -1
+        Size = 110
+      end    
+      item
+        Name = 'nama'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end    
+      item
+        Name = 'gambar'
+        DataType = ftString
+        Precision = -1
+        Size = 100
+      end    
+      item
+        Name = 'harga_beli'
+        DataType = ftFloat
+        Precision = -1
+      end    
+      item
+        Name = 'harga_jual'
+        DataType = ftFloat
+        Precision = -1
+      end    
+      item
+        Name = 'stok'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    Active = True
     Database = SQLConnector1
     Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from data_barang'
+    )
     Params = <>
     Macros = <>
     UpdateMode = upWhereAll
-    Left = 552
-    Top = 536
+    Left = 460
+    Top = 447
   end
 end

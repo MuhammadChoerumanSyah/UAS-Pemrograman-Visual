@@ -5,11 +5,10 @@ unit uDataBarang;
 interface
 
 uses
-  Classes, SysUtils, DB, SQLDB, odbcconn, Forms, Controls, Graphics, Dialogs, uTambahbarang, uUpdateBarang,
-  StdCtrls, DBCtrls, DBGrids;
+  Classes, SysUtils, DB, SQLDB, odbcconn, Forms, Controls, Graphics, Dialogs,
+  uTambahbarang, uUpdateBarang, StdCtrls, DBCtrls, DBGrids;
 
 type
-
   { TTfrmDataBarang }
 
   TTfrmDataBarang = class(TForm)
@@ -25,6 +24,7 @@ type
     SQLConnector1: TSQLConnector;
     SQLQueryDataBarang: TSQLQuery;
     SQLTransaction1: TSQLTransaction;
+
     procedure BCariClick(Sender: TObject);
     procedure BHapusDataClick(Sender: TObject);
     procedure BResetClick(Sender: TObject);
@@ -33,10 +33,12 @@ type
     procedure DBGridDataBarangCellClick(Column: TColumn);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
+
   private
 
   public
     procedure AmbilDataBarang;
+
   end;
 
 var
@@ -51,12 +53,14 @@ implementation
 
 procedure TTfrmDataBarang.AmbilDataBarang;
 begin
-with SQLQueryDataBarang do
-  begin
-    Close;
-    SQL.Text := 'SELECT d.id, d.nama, k.nama as kategori, d.harga_beli, d.harga_jual, d.stok  FROM data_barang as d JOIN kategori as k ON k.id = d.kategori_id';
-    Open;
-  end;
+  //with SQLQueryDataBarang do
+  //begin
+  //  Close;
+  //  SQL.Text :=
+  //    'SELECT d.id, d.nama, k.nama as kategori, d.harga_beli, d.harga_jual, d.stok ' +
+  //    'FROM data_barang as d JOIN kategori as k ON k.id = d.id';
+  //  Open;
+  //end;
 end;
 
 procedure TTfrmDataBarang.FormCreate(Sender: TObject);
@@ -69,7 +73,8 @@ begin
   with SQLQueryDataBarang do
   begin
     Close;
-    SQL.Text := 'SELECT d.id, d.nama, k.nama as kategori, d.harga_beli, d.harga_jual, d.stok  FROM data_barang as d JOIN kategori as k ON k.id = d.kategori_id WHERE d.nama LIKE :nama ';
+    SQL.Text :=
+      'SELECT * FROM data_barang WHERE nama LIKE :nama';
     Params.ParamByName('nama').AsString := '%' + ECari.Text + '%';
     Open;
   end;
@@ -81,30 +86,30 @@ var
 begin
   if idGrid <> 0 then
   begin
-       Response := MessageDlg('Anda yakin ingin menghapus?', mtConfirmation, mbYesNo, 0);
-       if Response = mrYes then
-       begin
-       try
-          with SQLQueryDataBarang do
-          begin
-               Close;
-               SQL.Text := 'DELETE FROM data_barang WHERE id = :id ';
-               Params.ParamByName('id').AsString := IntToStr(idGrid);
-               ExecSQL;
-               SQLTransaction1.Commit;
-               AmbilDataBarang;
-          end;
-       except
-         on E: Exception do
-         begin
-            ShowMessage('Terjadi Kesalahan : ' + E.Message);
-            SQLTransaction1.Rollback;
-         end;
+    Response := MessageDlg('Anda yakin ingin menghapus?', mtConfirmation, mbYesNo, 0);
+    if Response = mrYes then
+    begin
+      try
+        with SQLQueryDataBarang do
+        begin
+          Close;
+          SQL.Text := 'DELETE FROM data_barang WHERE id = :id';
+          Params.ParamByName('id').AsString := IntToStr(idGrid);
+          ExecSQL;
+          SQLTransaction1.Commit;
+          AmbilDataBarang;
+        end;
+      except
+        on E: Exception do
+        begin
+          ShowMessage('Terjadi Kesalahan : ' + E.Message);
+          SQLTransaction1.Rollback;
+        end;
       end;
-  end;
+    end;
   end
   else
-    ShowMessage('Klik data yang ingin dihapus terlebih dahulu');
+    ShowMessage('Klik data yang ingin dihapus');
 end;
 
 procedure TTfrmDataBarang.BResetClick(Sender: TObject);
@@ -121,11 +126,9 @@ begin
     frmTambahBarang := TTfrmTambahBarang.Create(Self);
     Self.Hide;
     if frmTambahBarang.ShowModal = mrOk then
-    begin
-       ModalResult := mrOk;
-    end
+      ModalResult := mrOk
     else
-       Self.Show;
+      Self.Show;
   finally
     frmTambahBarang.Free;
   end;
@@ -139,9 +142,7 @@ begin
     frmUpdateBarang := TTfrmUpdateBarang.Create(Self);
     Self.Hide;
     if frmUpdateBarang.ShowModal = mrOk then
-    begin
-      ModalResult := mrOk;
-    end
+      ModalResult := mrOk
     else
       Self.Show;
   finally
@@ -154,10 +155,9 @@ begin
   idGrid := StrToInt(DBGridDataBarang.DataSource.DataSet.FieldByName('id').AsString);
 end;
 
-procedure TTfrmDataBarang.FormClose(Sender: TObject;
-  var CloseAction: TCloseAction);
+procedure TTfrmDataBarang.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-   ModalResult := mrOk;
+  ModalResult := mrOk;
 end;
 
 end.

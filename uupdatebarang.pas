@@ -60,10 +60,10 @@ begin
     with SQLQuery2 do
     begin
       SQL.Clear;
-      SQL.Add('UPDATE data_barang SET nama=:nama, kategori_id=:kategori_id, harga_beli=:harga_beli, harga_jual=:harga_jual, stok=:stok');
+      SQL.Add('UPDATE data_barang SET nama=:nama, kategori=:kategori, harga_beli=:harga_beli, harga_jual=:harga_jual, stok=:stok');
       SQL.Add('WHERE id = :id');
       Params.ParamByName('nama').AsString:=ENama.Text;
-      Params.ParamByName('kategori_id').AsInteger:=DBLookupkategori.KeyValue;
+      Params.ParamByName('kategori').AsString:=DBLookupkategori.Text;
       Params.ParamByName('id').AsInteger:=DBLookupId.KeyValue;
       Params.ParamByName('harga_beli').AsInteger:=StrToInt(EHargaBeli.Text);
       Params.ParamByName('harga_jual').AsInteger:=StrToInt(EHargaJual.Text);
@@ -76,7 +76,7 @@ begin
       EHargaJual.Text:='';
       EJumlahStok.Text:='';
       upd := True;
-      ShowMessage('Berhasil diupdate');
+      ShowMessage('Update berhasil!');
     end;
     SQLQuery1.Open;
     SQLQuery3.Open;
@@ -91,25 +91,33 @@ var
   id: string;
 begin
   try
-    SQLQuery3.SQL.Clear;
-    SQLQuery3.Params.Clear;
-    SQLQuery3.SQL.Add('SELECT * FROM data_barang WHERE id = :id');
-    SQLQuery3.Params.ParamByName('id').AsInteger := DBLookupId.KeyValue;
-    SQLQuery3.Close;
-    SQLQuery3.Open;
-    id := IntToStr(DBLookupId.KeyValue);
+  SQLQuery3.SQL.Clear;
+  SQLQuery3.Params.Clear;
+  SQLQuery3.SQL.Add('SELECT * FROM data_barang WHERE id = :id');
+  SQLQuery3.Params.ParamByName('id').AsInteger := DBLookupId.KeyValue;
+  SQLQuery3.Close;
+  SQLQuery3.Open;
+  id := IntToStr(DBLookupId.KeyValue);
 
-    ENama.Text := SQLQuery3.FieldByName('nama').AsString;
-    EHargaJual.Text := SQLQuery3.FieldByName('harga_jual').AsString;
-    EHargaBeli.Text := SQLQuery3.FieldByName('harga_beli').AsString;
-    EJumlahStok.Text := SQLQuery3.FieldByName('stok').AsString;
+  ENama.Text := SQLQuery3.FieldByName('nama').AsString;
+  EHargaJual.Text := SQLQuery3.FieldByName('harga_jual').AsString;
+  EHargaBeli.Text := SQLQuery3.FieldByName('harga_beli').AsString;
+  EJumlahStok.Text := SQLQuery3.FieldByName('stok').AsString;
+
+  // Assuming 'kategori_id' is the correct field for the category ID in the 'data_barang' table
+  if not SQLQuery3.FieldByName('nama').IsNull then
+  begin
     DBLookupkategori.ListSource := Datasource1;
     DBLookupkategori.ListField := 'nama';
-    DBLookupkategori.KeyValue:=SQLQuery3.FieldByName('kategori_id').AsString;
-  except
-    on E: Exception do
-      ShowMessage('Terjadi Kesalahan : ' + E.Message);
-  end;
+    DBLookupkategori.KeyValue := SQLQuery3.FieldByName('id').AsInteger;
+  end
+  else
+    DBLookupkategori.KeyValue := null; // or another suitable default value
+except
+  on E: Exception do
+    ShowMessage('Terjadi Kesalahan : ' + E.Message);
+end;
+
 
   try
     SQLQuery3.SQL.Clear;

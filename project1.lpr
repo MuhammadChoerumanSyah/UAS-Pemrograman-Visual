@@ -10,7 +10,7 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, uMain, uLogin, uTambahbarang, uUpdateBarang, uDataBarang, unit_transaksi,
+  Forms, uMain, uLogin, uTambahbarang, uUpdateBarang, uDataBarang, uTransaksi,
   uTambahTransaksi, uTambahDetailTransaksi, uReport, uDataKategoriBarang,
 uTambahKategori, uUpdateKategori
   { you can add units after this };
@@ -25,6 +25,7 @@ begin
   Application.CreateForm(TTfrmLogin, TfrmLogin);
   Application.CreateForm(TTfrmTambahBarang, TfrmTambahBarang);
   Application.CreateForm(TTfrmUpdateBarang, TfrmUpdateBarang);
+  Application.CreateForm(TTfrmTransaksi, TfrmTransaksi);
   Application.CreateForm(TTfrmTambahTransaksi, TfrmTambahTransaksi);
   Application.CreateForm(TTfrmTambahDetailTransaksi, TfrmTambahDetailTransaksi);
   Application.CreateForm(TTfrmReport, TfrmReport);
@@ -32,7 +33,6 @@ begin
   Application.CreateForm(TTfrmDataKategoriBarang, TfrmDataKategoriBarang);
   Application.CreateForm(TTfrmTambahKategori, TfrmTambahKategori);
   Application.CreateForm(TTfrmUpdateKategori, TfrmUpdateKategori);
-  Application.CreateForm(TTfrmTransaksi, TfrmTransaksi);
   Application.Run;
 end.
 

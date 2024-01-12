@@ -55,13 +55,14 @@ begin
     with SQLQuery2 do
     begin
       SQL.Clear;
-      SQL.Add('INSERT INTO data_barang (nama, kategori_id, harga_beli, harga_jual, stok)');
-      SQL.Add('VALUES (:nama, :kategori_id, :harga_beli, :harga_jual, :stok)');
-      Params.ParamByName('nama').AsString:=ENama.Text;
-      Params.ParamByName('kategori_id').AsInteger:=DBLookupkategori.KeyValue;
-      Params.ParamByName('harga_beli').AsInteger:=StrToInt(EHargaBeli.Text);
-      Params.ParamByName('harga_jual').AsInteger:=StrToInt(EHargaJual.Text);
-      Params.ParamByName('stok').AsInteger:=StrToInt(EJumlahStok.Text);
+      SQL.Add('INSERT INTO data_barang (nama, kategori, harga_beli, harga_jual, stok)');
+      SQL.Add('VALUES (:nama, (SELECT nama FROM kategori WHERE nama = :kategori), :harga_beli, :harga_jual, :stok)');
+
+      Params.ParamByName('nama').AsString := ENama.Text;
+      Params.ParamByName('kategori').AsString := DBLookupkategori.Text; // Assuming DBLookupkategori displays the category name
+      Params.ParamByName('harga_beli').AsInteger := StrToInt(EHargaBeli.Text);
+      Params.ParamByName('harga_jual').AsInteger := StrToInt(EHargaJual.Text);
+      Params.ParamByName('stok').AsInteger := StrToInt(EJumlahStok.Text);
       ExecSQL;
       SQLTransaction1.Commit;
 
@@ -70,7 +71,7 @@ begin
       EHargaJual.Text:='';
       EJumlahStok.Text:='';
       add := True;
-      ShowMessage('Berhasil ditambahkan');
+      ShowMessage('Berhasil menambahkan barang!');
     end;
     SQLQuery1.Open;
   except
