@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="project1.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="5"/>
+        <CursorPos X="82" Y="13"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="umain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TfrmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uMain"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="38" Y="9"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ulogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TfrmLogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uLogin"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="7"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="utambahbarang.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TfrmTambahBarang"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uTambahbarang"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="7"/>
+        <UsageCount Value="63"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uupdatebarang.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TfrmUpdateBarang"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uUpdateBarang"/>
+        <EditorIndex Value="9"/>
+        <CursorPos X="7"/>
+        <UsageCount Value="61"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="utambahtransaksi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TfrmTambahTransaksi"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uTambahTransaksi"/>
+        <EditorIndex Value="7"/>
+        <CursorPos X="69" Y="8"/>
+        <UsageCount Value="54"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="utambahdetailtransaksi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TfrmTambahDetailTransaksi"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uTambahDetailTransaksi"/>
+        <EditorIndex Value="5"/>
+        <CursorPos X="7"/>
+        <UsageCount Value="53"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uReport.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TfrmReport"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="8"/>
+        <CursorPos X="97" Y="4"/>
+        <UsageCount Value="41"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="udatabarang.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TfrmDataBarang"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uDataBarang"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="85" Y="8"/>
+        <UsageCount Value="38"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="udatakategoribarang.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TfrmDataKategoriBarang"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uDataKategoriBarang"/>
+        <EditorIndex Value="10"/>
+        <CursorPos X="40" Y="9"/>
+        <UsageCount Value="38"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="utambahkategori.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TfrmTambahKategori"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uTambahKategori"/>
+        <EditorIndex Value="6"/>
+        <CursorPos X="7"/>
+        <UsageCount Value="36"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uupdatekategori.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TfrmUpdateKategori"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uUpdateKategori"/>
+        <EditorIndex Value="12"/>
+        <CursorPos X="7"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit_transaksi.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="TfrmTransaksi"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uTransaksi.pas"/>
+        <ComponentName Value="TfrmTransaksi"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="20"/>
+        <UsageCount Value="59"/>
+      </Unit>
+      <Unit>
+        <Filename Value="udatamaster.pas"/>
+        <ComponentName Value="TfrmDataMaster"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uDataBarang"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="17"/>
+        <UsageCount Value="42"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\win\sysutils.pp"/>
+        <UnitName Value="SysUtils"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="12"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\stdctrls.pp"/>
+        <UnitName Value="StdCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1584"/>
+        <CursorPos X="23" Y="1621"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\forms.pp"/>
+        <UnitName Value="Forms"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="711"/>
+        <CursorPos X="14" Y="722"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="umain.lfm"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\dialogs.pp"/>
+        <UnitName Value="Dialogs"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="716"/>
+        <CursorPos X="11" Y="727"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\menus.pp"/>
+        <UnitName Value="Menus"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="136"/>
+        <CursorPos X="3" Y="147"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-db\src\base\db.pas"/>
+        <UnitName Value="DB"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1682"/>
+        <CursorPos X="15" Y="1688"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-db\src\sqldb\sqldb.pp"/>
+        <UnitName Value="SQLDB"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2093"/>
+        <CursorPos X="26" Y="2797"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\interfaces\carbon\pascocoa\appkit\appkit.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="6"/>
+        <CursorPos X="6" Y="18"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="27">
+      <Position>
+        <Filename Value="uReport.pas"/>
+        <Caret Line="120" Column="23" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="udatakategoribarang.pas"/>
+        <Caret Line="92" Column="7" TopLine="61"/>
+      </Position>
+      <Position>
+        <Filename Value="utambahbarang.pas"/>
+        <Caret Line="81" Column="56" TopLine="66"/>
+      </Position>
+      <Position>
+        <Filename Value="utambahdetailtransaksi.pas"/>
+        <Caret Line="9" Column="51"/>
+      </Position>
+      <Position>
+        <Filename Value="utambahdetailtransaksi.pas"/>
+        <Caret Line="169" Column="3" TopLine="140"/>
+      </Position>
+      <Position>
+        <Filename Value="utambahdetailtransaksi.pas"/>
+        <Caret Line="170" Column="3" TopLine="147"/>
+      </Position>
+      <Position>
+        <Filename Value="utambahdetailtransaksi.pas"/>
+        <Caret Line="171" Column="3" TopLine="148"/>
+      </Position>
+      <Position>
+        <Filename Value="utambahdetailtransaksi.pas"/>
+        <Caret Line="170" Column="3" TopLine="147"/>
+      </Position>
+      <Position>
+        <Filename Value="utambahdetailtransaksi.pas"/>
+        <Caret Line="169" Column="3" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="utambahdetailtransaksi.pas"/>
+        <Caret Line="152" Column="24" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="utambahdetailtransaksi.pas"/>
+        <Caret Line="160" Column="44" TopLine="147"/>
+      </Position>
+      <Position>
+        <Filename Value="utambahdetailtransaksi.pas"/>
+        <Caret Line="140" Column="21" TopLine="130"/>
+      </Position>
+      <Position>
+        <Filename Value="utambahdetailtransaksi.pas"/>
+        <Caret Line="138" Column="477" TopLine="129"/>
+      </Position>
+      <Position>
+        <Filename Value="umain.pas"/>
+        <Caret Line="118" Column="12" TopLine="110"/>
+      </Position>
+      <Position>
+        <Filename Value="udatabarang.pas"/>
+        <Caret Line="74" Column="33" TopLine="74"/>
+      </Position>
+      <Position>
+        <Filename Value="utambahkategori.pas"/>
+        <Caret Line="47" Column="42" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="utambahtransaksi.pas"/>
+        <Caret Line="8" Column="16"/>
+      </Position>
+      <Position>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="15" Column="17"/>
+      </Position>
+      <Position>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="13" Column="10" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="umain.pas"/>
+        <Caret Line="4" Column="20"/>
+      </Position>
+      <Position>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="13" Column="10" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ulogin.pas"/>
+        <Caret Line="4" Column="23"/>
+      </Position>
+      <Position>
+        <Filename Value="ulogin.pas"/>
+        <Caret Line="40" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="14" Column="36" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="13" Column="11" TopLine="3"/>
+      </Position>
+      <Position>
+        <Filename Value="uupdatekategori.pas"/>
+        <Caret Column="11"/>
+      </Position>
+      <Position>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="13" Column="10" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="ulogin.pas"/>
+        <Caret Column="7"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
