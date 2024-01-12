@@ -83,7 +83,7 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
         Name = 'kategori'
         DataType = ftString
         Precision = -1
-        Size = 30
+        Size = 110
       end    
       item
         Name = 'nama'
@@ -112,6 +112,7 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
         DataType = ftInteger
         Precision = -1
       end>
+    Active = True
     Database = SQLConnector1
     Transaction = SQLTransaction1
     SQL.Strings = (
@@ -123,7 +124,7 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
     Top = 227
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Database = SQLConnector1
     Left = 587
     Top = 153
@@ -238,6 +239,7 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
         Precision = -1
         Size = 100
       end>
+    Active = True
     Database = SQLConnector1
     Transaction = SQLTransaction1
     SQL.Strings = (

@@ -87,6 +87,7 @@ object TfrmDataBarang: TTfrmDataBarang
   end
   object DataSourceDataBarang: TDataSource
     DataSet = SQLQueryDataBarang
+    OnDataChange = DataSourceDataBarangDataChange
     Left = 536
     Top = 328
   end

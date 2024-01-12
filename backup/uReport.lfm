@@ -126,6 +126,7 @@ object TfrmReport: TTfrmReport
   end
   object DataSource1: TDataSource
     DataSet = SQLQuery1
+    OnDataChange = DataSource1DataChange
     Left = 400
     Top = 300
   end
@@ -196,6 +197,7 @@ object TfrmReport: TTfrmReport
         Precision = -1
         Size = 100
       end>
+    Active = True
     Database = SQLConnector1
     Transaction = SQLTransaction1
     SQL.Strings = (
@@ -238,7 +240,7 @@ object TfrmReport: TTfrmReport
     Top = 300
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Database = SQLConnector1
     Left = 67
     Top = 300
@@ -254,6 +256,7 @@ object TfrmReport: TTfrmReport
   end
   object frDBDataSet1: TfrDBDataSet
     DataSet = SQLQuery1
+    OnCheckEOF = frDBDataSet1CheckEOF
     Left = 607
     Top = 300
   end

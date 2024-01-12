@@ -30,6 +30,7 @@ type
     procedure BResetClick(Sender: TObject);
     procedure BTambahBarangClick(Sender: TObject);
     procedure BUpdateBarangClick(Sender: TObject);
+    procedure DataSourceDataBarangDataChange(Sender: TObject; Field: TField);
     procedure DBGridDataBarangCellClick(Column: TColumn);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
@@ -148,6 +149,12 @@ begin
   finally
     frmUpdateBarang.Free;
   end;
+end;
+
+procedure TTfrmDataBarang.DataSourceDataBarangDataChange(Sender: TObject;
+  Field: TField);
+begin
+
 end;
 
 procedure TTfrmDataBarang.DBGridDataBarangCellClick(Column: TColumn);

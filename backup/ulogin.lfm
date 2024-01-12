@@ -93,7 +93,7 @@ object TfrmLogin: TTfrmLogin
     Top = 256
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Database = SQLConnector1
     Left = 192
     Top = 288

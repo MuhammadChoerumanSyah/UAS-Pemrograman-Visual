@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, SQLDB, odbcconn, DB, Forms, Controls, Graphics, Dialogs,
-  StdCtrls, DBCtrls, LR_Class, LR_DBSet, DateUtils;
+  StdCtrls, DBCtrls, LR_Class, LR_DBSet, DateUtils, LR_DSet;
 
 type
 
@@ -31,6 +31,8 @@ type
     procedure BTambahDetailTransaksiClick(Sender: TObject);
     procedure DBLookupBarangChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure frDBDataSet1CheckEOF(Sender: TObject; var Eof: Boolean);
+    procedure SQLConnector1AfterConnect(Sender: TObject);
   private
     customer: string;
     id_transaksi: integer;
@@ -187,6 +189,17 @@ end;
 procedure TTfrmTambahDetailTransaksi.FormCreate(Sender: TObject);
 begin
   SQLQueryPilihBarang.Open;
+end;
+
+procedure TTfrmTambahDetailTransaksi.frDBDataSet1CheckEOF(Sender: TObject;
+  var Eof: Boolean);
+begin
+
+end;
+
+procedure TTfrmTambahDetailTransaksi.SQLConnector1AfterConnect(Sender: TObject);
+begin
+
 end;
 
 procedure TTfrmTambahDetailTransaksi.DBLookupBarangChange(Sender: TObject);

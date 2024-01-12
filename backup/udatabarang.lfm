@@ -132,6 +132,7 @@ object TfrmDataBarang: TTfrmDataBarang
         DataType = ftInteger
         Precision = -1
       end>
+    Active = True
     Database = SQLConnector1
     Transaction = SQLTransaction1
     SQL.Strings = (
@@ -143,7 +144,7 @@ object TfrmDataBarang: TTfrmDataBarang
     Top = 328
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Database = SQLConnector1
     Left = 304
     Top = 328

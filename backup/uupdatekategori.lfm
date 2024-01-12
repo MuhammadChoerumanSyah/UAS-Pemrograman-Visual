@@ -64,7 +64,7 @@ object TfrmUpdateKategori: TTfrmUpdateKategori
     Top = 200
   end
   object SQLTransaction1: TSQLTransaction
-    Active = False
+    Active = True
     Database = SQLConnector1
     Left = 60
     Top = 200

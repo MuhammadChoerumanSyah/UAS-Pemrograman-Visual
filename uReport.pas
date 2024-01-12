@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, DB, SQLDB, Forms, Controls, Graphics, Dialogs, DBGrids,
-  StdCtrls, EditBtn, ExtDlgs, LR_Class, LR_DBSet, DateUtils;
+  StdCtrls, EditBtn, ExtDlgs, LR_Class, LR_DBSet, DateUtils, LR_DSet;
 
 type
 
@@ -32,6 +32,8 @@ type
     procedure BCariClick(Sender: TObject);
     procedure BLaporanClick(Sender: TObject);
     procedure BResetClick(Sender: TObject);
+    procedure DataSource1DataChange(Sender: TObject; Field: TField);
+    procedure frDBDataSet1CheckEOF(Sender: TObject; var Eof: Boolean);
   private
     id: integer;
 
@@ -118,6 +120,16 @@ begin
   ECari.Text := '';
   DateEdit1.Date := 0;
   DateEdit2.Date := 0;
+end;
+
+procedure TTfrmReport.DataSource1DataChange(Sender: TObject; Field: TField);
+begin
+
+end;
+
+procedure TTfrmReport.frDBDataSet1CheckEOF(Sender: TObject; var Eof: Boolean);
+begin
+
 end;
 
 end.

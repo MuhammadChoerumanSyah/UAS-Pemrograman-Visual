@@ -132,6 +132,7 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
   object SQLConnector1: TSQLConnector
     Connected = True
     LoginPrompt = False
+    AfterConnect = SQLConnector1AfterConnect
     DatabaseName = 'latihan1'
     KeepConnection = False
     Transaction = SQLTransaction1
@@ -169,6 +170,7 @@ object TfrmTambahDetailTransaksi: TTfrmTambahDetailTransaksi
   end
   object frDBDataSet1: TfrDBDataSet
     DataSet = SQLQuery1
+    OnCheckEOF = frDBDataSet1CheckEOF
     Left = 67
     Top = 93
   end

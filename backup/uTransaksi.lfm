@@ -181,7 +181,7 @@ object TfrmTransaksi: TTfrmTransaksi
         Name = 'kategori'
         DataType = ftString
         Precision = -1
-        Size = 30
+        Size = 110
       end    
       item
         Name = 'nama'
@@ -210,6 +210,7 @@ object TfrmTransaksi: TTfrmTransaksi
         DataType = ftInteger
         Precision = -1
       end>
+    Active = True
     Database = SQLConnector1
     Transaction = SQLTransaction1
     SQL.Strings = (
